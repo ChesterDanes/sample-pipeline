@@ -9,7 +9,7 @@ with open(input_file) as f:
 
 total_tests = 0
 failures = 0
-classname = "HelloTest"
+classname = "Testowy"
 
 for line in lines:
     if line.strip() == ".":
