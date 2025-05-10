@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Zeris72/ZIO', branch: 'main'
+                git url: 'https://github.com/ChesterDanes/sample-pipeline', branch: 'main'
             }
         }
 
@@ -44,12 +44,12 @@ pipeline {
 
     post {
     success {
-        mail to: 'uterek58@gmail.com',
+        mail to: 'krzykirrp@gmail.com',
              subject: "✅ Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
              body: "Build zakończył się sukcesem.\n\nZobacz: ${env.BUILD_URL}"
     }
     failure {
-        mail to: 'uterek58@gmail.com',
+        mail to: 'krzykirrp@gmail.com',
              subject: "❌ Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
              body: "Build się nie powiódł.\n\nZobacz logi: ${env.BUILD_URL}"
     }
